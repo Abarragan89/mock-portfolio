@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #3B878A;
+    --secondary-color: #FDF0A4;
+    --tertriary-color: #8A376F;
+    --quatriary-color: #51D2D6;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--primary-color);
+}
+/* Styles for the Header */
+header {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header h1 {
+    letter-spacing: 4px;
+    font-size: 44px;
+    color: var(--tertriary-color);
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+}
+header h2 {
+    letter-spacing: .2em;
+    color: var(--primary-color);
+    text-align: center;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: var(--tertriary-color);
+    font-size: 2.3em;
+    margin-left: 50px;
+    letter-spacing: .25em;
+    text-shadow: 5px 5px 25px black;
+}
+header nav {
+    flex: 2;
+    text-align: center;
+    align-self: center;
+    
+}
+header nav ul li {
+    list-style-type: none;
+    display: inline;
+    
+}
+header div {
+    flex: 1;
+}
+
+/* Styles for the section */
+#bio {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+#bio img {
+    width: 200px;
+    border-radius: 50%;
+    flex: 1;
+    border: 1px solid black;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+#bio div {
+    flex: 5;
+    color: white;
+    font-size: 26px;
+    line-height: 1.5;
+    margin: 7% 15%;
+    border: 1px solid black;
+    padding: 25px
+}
+#bio div h3 {
+    text-align: center;
+}
+
+/* Styles for the Projects */
