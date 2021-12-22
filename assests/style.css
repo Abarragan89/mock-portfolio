@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #3B878A;
-    --secondary-color: #FDF0A4;
-    --tertriary-color: #8A376F;
-    --quatriary-color: #51D2D6;
+    --primary-color: #6A81A3;
+    --secondary-color: #A3967A;
+    --tertriary-color: #FFFBF2;
+    --quatriary-color: #CCDAF0;
 }
 * {
     padding: 0;
@@ -19,30 +19,37 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
 }
 header h1 {
     letter-spacing: 4px;
     font-size: 36px;
-    color: var(--tertriary-color);
+    color: black;
     font-family: 'Staatliches', cursive;
     text-align: center;
+    
 }
 header h2 {
     letter-spacing: .2em;
-    color: var(--primary-color);
+    color: var(--quatriary-color);
     text-align: center;
+    text-shadow: 5px 5px 25px black;
 }
 header nav ul li a {
     text-decoration: none;
     color: var(--tertriary-color);
-    font-size: 1.75em;
+    font-size: 1.25em;
     margin-left: 50px;
+    margin-right: 20px;
     letter-spacing: .25em;
     text-shadow: 5px 5px 25px black;
 }
 header nav {
     flex: 2;
-    text-align: center;
+    text-align: right;
     align-self: center;
     
 }
@@ -56,6 +63,7 @@ header div {
 }
 
 /* Styles for the section */
+
 #bio {
     display: flex;
     align-items: flex-start;
@@ -71,7 +79,7 @@ header div {
 }
 #bio div {
     flex: 5;
-    color: white;
+    color: black;
     font-size: 20px;
     line-height: 1.5;
     margin: 7% 7%;
@@ -81,58 +89,122 @@ header div {
 }
 #bio div h3 {
     text-align: center;
+    font-size: 36px;
+    color: var(--tertriary-color)
 }
 
-/* Styles for the Projects */
-section h3 {
-    text-align: center;
-    font-size: 52px;
-    color: var(--secondary-color);
-}
-#projects h3 {
-    padding-top: 15px;
-    border-top: 1px solid var(--secondary-color);
-    margin: 2% 10%;
-}
-#project-jumbo {
-    display: flex;
-    flex-wrap: wrap;
-}
-#project-jumbo  img{
-    margin: 15px;
-}
-#project-jumbo div, #project-jumbo figure, #project-jumbo figcaption {
-    flex: 1;
-}
-#project-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#project-info a {
-    text-align: right;
-    color: var(--tertriary-color);
-    font-size: 1.2em;
-}
-#project-title {
-    font-size: 28px;
-    font-family: 'Permanent Marker', cursive;
-    color: var(--quatriary-color);
-    text-align: right;
-}
-figcaption {
-    color: white;
-    line-height: 1.5;
-    align-self: center;
-    text-align: left;
-}
 
 /* Styles for Gallery */
 #gallery {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+#gallery h3 {
+    font-size: 36px;
+    text-align: center;
+    width: 85%;
+    color: var(--tertriary-color);
+    border-top: 2px solid var(--tertriary-color);
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-top: 35px;
+}
+#gallery div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #gallery figure {
-    flex: 1;
-    width: 200px;
+    margin: 0 10px 20px 10px;
+    background-color: var(--quatriary-color);
+    padding: 15px;
+    border-radius: 10px;
+    border: solid 1px black;
+    box-shadow: 0 15px 10px black;
+}
+#gallery figure:hover {
+    background-color: var(--secondary-color);
+}
+#gallery figure:active {
+    box-shadow: none;
+}
+#gallery figure p {
+    color: black;
+    text-align: center;
+    font-size: 26px;
+}
+/* Styles for the Contact */
+#contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+#contact h3 {
+    font-size: 36px;
+    letter-spacing: .35em;
+    text-align: center;
+    color: var(--tertriary-color);
+    border-top: 2px solid var(--tertriary-color);
+    margin: 50px;
+    padding-top: 25px;
+
+}
+#contact p {
+    font: 15px;
+    line-height: 1.5;
+    color: var(--tertriary-color);
+}
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+#contact h4 {
+    padding-bottom: 15px;
+    color: var(--tertriary-color);
+    font-size: 20px;
+}
+#contact .flex-row {
+    justify-content: center;
+
+}
+
+#contact .flex-column:first-child {
+    padding-right: 50px;
+    text-align: right;
+}
+#contact input, #contact textarea, #contact button{
+    padding: .3em;
+    margin-bottom: 1em;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+#contact input, #contact textarea {
+    background-color: var(--primary-color);
+}
+#contact input::placeholder, #contact textarea::placeholder {
+    color: black;
+}
+#contact button {
+    background-color: yellow;
+    color: black;
+    box-shadow: 5px 5px 10px black;
+}
+#contact button:hover {
+    background-color: green;
+}
+#contact button:active {
+    box-shadow: none;
+}
+#contact input:focus, #contact textarea:focus {
+    background-color: white;
 }

@@ -12,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assests/font-awesome.css">
 </head>
 <body>
     <header>
         <div>
             <h1>Anthony Barragan</h1>
-            <h2>software engineer</h2>
         </div>
         <nav>
             <ul>
@@ -34,23 +35,9 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam excepturi soluta veritatis tempora repudiandae tenetur eaque iusto, placeat ullam ut iure dicta, veniam modi, quos ipsam velit magni! Possimus, nostrum!</p>
         </div>
     </section>
-    <section id="projects">
-        <h3>Projects</h3>
-        <article id="project-jumbo">
-            <div id="project-info">
-                <h4 id="project-title">Math Madness</h4>
-                <a id="project-picture" href="https://abarragan89.github.io/math_madness/">Check It Out</a>
-            </div>
-            <figure>
-                <img src="assests/images/math-madness.png" width="400" alt="This is a competitve multiplication game for kids. Try to answer as many questions as you can in 30 seconds and beat you friend's highscore!">
-            </figure>
-            <figcaption id="project-description">
-                This is a competitve multiplication game for kids. Try to answer as many questions as you can in 30 seconds and beat you friend's highscore!
-            </figcaption>
-        </article>
-        <section>
-            <h3>Gallery</h3>
-            <div id="gallery">
+        <section id="gallery">
+            <h3>Project Gallery</h3>
+            <div>
                 <figure>
                     <img src="assests/images/snake-game.png" width="200" alt="This is a replica of the classic 'snake game'. This project came from 'JavaScript For Kids' by Nick Morgan">
                     <p>Snake Game</p>
@@ -76,16 +63,23 @@
     </section >
     <section id="contact">
         <h3>Contact</h3>
-        <div>
-            <div>
-                <h5>Contact Info</h5>
-                
+        <div class="flex-row">
+            <div class="flex-column">
+                <h4>Contact Info:</h4>
+                <div>
+                    <a href="mailto:anthony.bar.89@gmail.com"
+                    " class="fa fa-google"></a>
+                    <a href="https://www.linkedin.com/in/anthony-barragan-ba4a12226/" class="fa fa-linkedin"></a>
+                    <a href="https://facebook.com" class="fa fa-facebook"></a>
+                </div>
             </div>
-            <div>
-                <h5>Message Me</h5>
-            </div>
-            <div>
-                <h5>Another thing</h5>
+            <div class="flex-column">
+                <h4>Message Me</h4>
+                <form action="" method="POST" class="flex-column">
+                    <input type="text" placeholder="Name">
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                    <button type="submit">Send It!</button>
+                </form>
             </div>
         </div>
     </section>
