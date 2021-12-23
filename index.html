@@ -5,20 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Barragan</title>
-    <link rel="stylesheet" href="assests/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="stylesheet" href="assests/css/canvas-styles.css">
+    
+    <!-- stylesheets for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assests/font-awesome.css">
+    <link rel="stylesheet" href="assests/css/font-awesome.css">
+    <!-- stylesheets for source code font (heading anchors) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <!-- Styles for h1  secular one header -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <canvas id="canvas1"></canvas>
     <header>
         <div>
-            <h1>Anthony Barragan</h1>
+            <h1> <a href="/">Anthony Barragan</a></h1>
         </div>
         <nav>
             <ul>
@@ -31,59 +37,49 @@
     <section id="bio">
         <img src="assests/images/profile-pic.JPG" alt="profile picture of Anthony Barragan" />
         <div>
-            <h3>Bio</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam excepturi soluta veritatis tempora repudiandae tenetur eaque iusto, placeat ullam ut iure dicta, veniam modi, quos ipsam velit magni! Possimus, nostrum!</p>
+            <h3 id="bio-title">Bio</h3>
+            <p>My name is Anthony. I've been teaching in elementary schools for about 9 years. I have recently found a passion for coding and creating digital applications. I've used 'pandemic downtime' to teach myself how to code.I enjoy making interactive apps and games. I am currently enrolled in a course that covers the MERN stack.</p>
+        </div>
+        <div id="social-icons">
+            <a href="mailto:anthony.bar.89@gmail.com" target="_blank"
+            class="fa fa-google"></a>
+            <a href="https://www.linkedin.com/in/anthony-barragan-ba4a12226/" class="fa fa-linkedin"></a>
+            <a href="https://facebook.com" class="fa fa-facebook"></a>
         </div>
     </section>
-        <section id="gallery">
-            <h3>Project Gallery</h3>
+        <section id="projects">
+            <h3 id="title1">Project Gallery</h3>
             <div>
                 <figure>
                     <img src="assests/images/snake-game.png" width="200" alt="This is a replica of the classic 'snake game'. This project came from 'JavaScript For Kids' by Nick Morgan">
-                    <p>Snake Game</p>
                 </figure>
                 <figure>
                     <img src="assests/images/math-madness.png" width="200" alt="This is a competitve multiplication game for kids. Try to answer as many questions as you can in 30 seconds and beat you friend's highscore!">
-                    <p>Math Madness</p>
                 </figure>
                 <figure>
                     <img src="assests/images/run-buddy.png" width="200" alt="This a landing page for a fictional company called 'Run Buddy'. This site is fully responsive uses pure HTML and CSS.">
-                    <p>Run Buddy</p>
                 </figure>
                 <figure>
                     <img src="assests/images/bootstrap-website.png" width="200" alt="This is a landing page for a fictional coding bootcamp company. This used the bootstrap framework and is fully responsive. This project came from an online tutorial by Brad Traversy">
-                    <p>Bootstrap Website</p>
                 </figure>
                 <figure>
                     <img src="assests/images/html-canvas.png" width="200"  alt="This uses HTML canvas to create a interactive effect. This project came from a YouTube channel called 'Franks Laboratory'.">
-                    <p>HTML Canvas</p>
                 </figure>
             </div>
         </section>
     </section >
     <section id="contact">
-        <h3>Contact</h3>
-        <div class="flex-row">
-            <div class="flex-column">
-                <h4>Contact Info:</h4>
-                <div>
-                    <a href="mailto:anthony.bar.89@gmail.com"
-                    " class="fa fa-google"></a>
-                    <a href="https://www.linkedin.com/in/anthony-barragan-ba4a12226/" class="fa fa-linkedin"></a>
-                    <a href="https://facebook.com" class="fa fa-facebook"></a>
-                </div>
-            </div>
-            <div class="flex-column">
-                <h4>Message Me</h4>
-                <form action="" method="POST" class="flex-column">
+        <h3>Message Me</h3>
+            <div id="message">
+                <form action="assests/messages.txt" method="POST" class="flex-column">
                     <input type="text" placeholder="Name">
-                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                    <textarea name="message" id="message" cols="10" rows="5" placeholder="Message"></textarea>
                     <button type="submit">Send It!</button>
                 </form>
             </div>
         </div>
     </section>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>    
-<script src="index.js"></script>
+<script src="assests/js/index.js"></script>
 </body>
 </html>
